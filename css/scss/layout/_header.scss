@@ -1,0 +1,135 @@
+// Start header
+header {
+    border: 1px solid;
+    border-color: transparent transparent rgba(42, 42, 42, 0.2) transparent;
+    background-color: transparent;
+
+    nav {
+        .container {
+            display: flex;
+            width: 85vw;
+            margin: 0 auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1em;
+            background-color: transparent;
+
+            .logo {
+                width: 96px;
+                height: 45px;
+                object-fit: cover;
+            }
+
+            .right {
+                display: flex;
+
+                @include MiniMobile {
+                    display: none;
+                }
+
+                @include MaxMobile {
+                    display: none;
+                }
+
+                .links {
+                    display: flex;
+                    margin: 0 30px;
+                    align-items: center;
+
+                    @include MaxSmall {
+                        margin: 5px;
+                    }
+
+                    li {
+                        margin: 0 15px;
+
+
+                        a {
+                            color: #000;
+                            transition: 0.5s;
+                            -webkit-transition: 0.3s;
+                            -moz-transition: 0.5s;
+                            -ms-transition: 0.5s;
+                            -o-transition: 0.5s;
+                            font-weight: 600;
+
+                            &:hover {
+                                color: $color-link;
+                            }
+                        }
+
+                        .active {
+                            color: $color-link;
+                        }
+                    }
+                }
+
+            }
+
+            .menu {
+                display: none;
+
+                @include MiniMobile {
+                    position: relative;
+                    display: block;
+
+                    .menu-links {
+                        display: none;
+                    }
+
+                    i {
+                        font-size: 30px;
+                        color: $color-link;
+                    }
+
+                    &:hover {
+                        .menu-links {
+                            display: block;
+                            text-align: center;
+
+                            li {
+                                padding: 15px 15px;
+                            }
+                        }
+
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+
+                @include MaxMobile {
+                    position: relative;
+                    display: block;
+
+                    .menu-links {
+                        display: none;
+                    }
+
+                    i {
+                        font-size: 30px;
+                        color: $color-link;
+                    }
+
+                    &:hover {
+                        .menu-links {
+                            display: block;
+                            text-align: center;
+
+                            li {
+                                padding: 15px;
+                            }
+                        }
+
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End header
